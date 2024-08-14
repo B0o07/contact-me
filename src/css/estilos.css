@@ -54,6 +54,12 @@ body {
     text-align: justify;
 }
 
+.militar {
+    width: 20%;
+    height: 30%;
+    text-align: right;
+}
+
 .fundo-video {
     position: absolute;
     z-index: -1;
