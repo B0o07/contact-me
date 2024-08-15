@@ -20,6 +20,16 @@ body {
     height: 100%;
 }
 
+.curriculo a:hover {
+    background-color: green;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
 .cabecalho nav li a {
     font-weight: bold;
     color: #ffffff;
@@ -55,9 +65,8 @@ body {
 }
 
 .militar {
-    width: 20%;
-    height: 30%;
-    text-align: right;
+    height: calc(100vh - 450px);
+    font-weight: bold;
 }
 
 .fundo-video {
