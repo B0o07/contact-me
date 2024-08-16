@@ -1,3 +1,9 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Evita que o conteúdo transborde além da página */
+}
 
 body {
     font-family: 'Poppins';
@@ -14,24 +20,10 @@ body {
     width: 100px;
 }
 
-.cabecalho .menu{
+.cabecalho .menu {
     display: flex;
     align-items: center;
     height: 100%;
-}
-
-.curriculo {
-    margin-bottom: 20px;
-}
-
-.curriculo a:hover {
-    background-color: green;
-    font-weight: bold;
-    color: #ffffff;
-    font-size: 25px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    transition: 0.2s;
 }
 
 .cabecalho nav li a {
@@ -48,12 +40,12 @@ body {
 }
 
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    height: calc(100vh - 132px);
-    padding: 0 30px 30px;
+    height: 100%; /* Garante que o container ocupe 100% da altura da tela */
+    padding: 20px;
 }
 
 .container .imagem-titulo {
@@ -68,23 +60,111 @@ body {
     text-align: justify;
 }
 
-.militar {
-    height: calc(100vh - 450px);
+.informacoes {
+    display: flex;
+    align-items: flex-start; /* Alinha o texto e a imagem pelo topo */
+    justify-content: flex-start; /* Garante que o conteúdo comece pela esquerda */
+    margin-top: 20px; /* Espaço superior opcional */
+}
+
+.informacoes .descricao {
+    font-size: 16px;
+    line-height: 1.6; /* Facilita a leitura do texto */
+    margin-right: 400px;
+    margin-left: 100px; 
+}
+
+.saulo {
+    max-width: 250px; /* Define uma largura máxima para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    position: absolute;
+    right: 0; /* Alinha a imagem à direita */
+    top: 500px; /* Ajuste a altura conforme necessário para ficar abaixo do botão "Home" */
+    align-self: center;
+}
+
+.redes {
+    margin-top: 300px; /* Ajuste a margem superior conforme necessário */
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between; /* Lista à esquerda, imagem à direita */
+    align-items: flex-start; /* Alinha os itens no topo */
+    position: relative; /* Para permitir o posicionamento da imagem */
+    width: 80%; /* Limita a largura do conteúdo */
+}
+
+.redes a:hover {
+    background-color: green;
     font-weight: bold;
+    color: #ffffff;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.redes .militar {
+    position: absolute;
+    right: 0; /* Alinha a imagem à direita */
+    top: 70px; /* Ajuste a altura conforme necessário para ficar abaixo do botão "Home" */
+    margin-left: 20px; /* Espaço entre a lista e a imagem */
+    align-self: center;
+}
+
+.redes ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+    flex: 1; /* Garante que a lista ocupe o espaço à esquerda */
+}
+
+
+.redes ul a {
+    align-items: center;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.redes ul li {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto em relação à imagem */
+    margin-bottom: 10px; /* Espaço entre os itens da lista */
+}
+
+.redes ul li img {
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.redes ul li a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Mantém a cor do texto padrão */
+    align-items: center;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px;
 }
 
 .fundo-video {
     position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
+    z-index: -1; /* Mantém o vídeo no fundo, atrás do conteúdo */
 }
 
 .fundo-video .video {
-    height: 100vh; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%); 
 }
 
 .fundo-video::after{
@@ -95,4 +175,16 @@ body {
     top: 0;
     left: 0;
     background: linear-gradient(90deg, rgba(0,0,0,1) 10%, rgba(17,143,18,0) 50%, rgba(0,0,0,1) 90%);
+}
+
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra toda a área */
+}
+
+.militar{
+    top: 1000;
+    left: 100;
 }
