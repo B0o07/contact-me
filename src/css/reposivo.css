@@ -3,10 +3,6 @@
         background-color: black;
     }
 
-    .fundo-video {
-        display: none;
-    }
-
     .container {
         flex-wrap: wrap;
         justify-content: center;
