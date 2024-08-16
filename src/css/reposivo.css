@@ -24,33 +24,63 @@
         color: #ffffff;
         text-align: center;
     }
+
+    .militar {
+        display: none;
+    }
 }
 
-@media (max-width: 500px) {
-   .cabecalho {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-   }
+@media (max-width: 768px) {
+    .container {
+        display: block; /* Volta ao fluxo padrão do bloco */
+    }
 
-   .container .imagem-titulo {
-    max-width: 75%;
-   }
+    .container .imagem-titulo {
+        width: 80%;
+        max-width: 400px;
+    }
 
-   .modal .fechar-modal {
-    width: 30px;
-    line-height: 30px;
-   }
+    .informacoes {
+        flex-direction: column; /* Empilha a imagem e o texto verticalmente em telas menores */
+        align-items: center;
+    }
 
-   .modal #video {
-    width: 300px;
-    height: 169px;
-   }
+    .saulo {
+        max-width: 300px;
+    }
+
+    .redes {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px; /* Espaço abaixo da lista */
+        display: block; /* Alinha os itens verticalmente */
+    }
 }
 
-@media (max-width: 376px) {
-    .modal #video {
-        width: 250px;
-        height: 140px;
+/* Layout para telas muito pequenas */
+@media (max-width: 480px) {
+
+    .container {
+        padding: 5px;
+    }
+
+    .container .imagem-titulo {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .saulo {
+        max-width: 250px;
+    }
+
+    .redes {
+        flex-direction: column; /* Alinha a lista e a imagem verticalmente */
+        align-items: center;
+        padding-top: 20vh;
+    }
+
+    .redes ul {
+        order: 1; /* Garante que a lista fique em cima */
+        margin-bottom: 30px; /* Espaço entre a lista e a imagem */
     }
 }

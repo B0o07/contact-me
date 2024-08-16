@@ -49,11 +49,21 @@ body {
     padding: 20px;
 }
 
-.container .imagem-titulo {
-    max-width: 500px;
+.redes {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens no início verticalmente */
+    gap: 800px; /* Espaço entre a lista e a imagem */
+    width: 100%; /* Ajusta a largura do contêiner */
+    max-width: 1200px; /* Define uma largura máxima para o contêiner */
 }
 
-.container .descricao {
+.redes-content {
+    flex: 1; /* Faz com que a lista ocupe o espaço disponível */
+    display: flex;
+    flex-direction: column;
+}
+
+.redes .descricao {
     color: #ffffff;
     width: 100%;
     font-size: 18px;
@@ -61,26 +71,41 @@ body {
     text-align: justify;
 }
 
-.informacoes {
+.redes ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+}
+
+.redes ul li {
     display: flex;
-    flex-direction: flex-start; /* Empilha a descrição e a imagem verticalmente */
-    align-items: center;
-    gap: 20px; /* Espaço entre a descrição e a imagem */
+    align-items: center; /* Centraliza verticalmente o texto em relação à imagem */
+    margin-bottom: 10px; /* Espaço entre os itens da lista */
+    transition: transform 0.3s ease;
 }
 
-.informacoes .descricao {
-    font-size: 16px;
-    line-height: 1.6; /* Facilita a leitura do texto */
-    max-width: 600px;
-    text-align: justify; /* Centraliza o texto */
+.redes ul li a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px;
 }
 
-.saulo {
-    max-width: 400px; /* Define uma largura máxima para a imagem */
+.redes ul li:hover {
+    transform: scale(1.1); /* Expande o item da lista */
+}
+
+.redes ul li img {
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+.militar {
+    max-width: 300px; /* Define uma largura máxima para a imagem */
     width: 100%; /* Ajusta a largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
 }
 
+/* Estilo de fundo do vídeo */
 .fundo-video {
     position: absolute;
     top: 0;
@@ -101,7 +126,7 @@ body {
     transform: translate(-50%, -50%); 
 }
 
-.fundo-video::after{
+.fundo-video::after {
     content: "";
     height: 100vh;
     width: 100vw;
