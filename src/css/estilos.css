@@ -70,17 +70,16 @@ body {
 .informacoes .descricao {
     font-size: 16px;
     line-height: 1.6; /* Facilita a leitura do texto */
-    margin-right: 400px;
-    margin-left: 100px; 
+    margin-right: 500px;
+    margin-left: 300px; 
 }
 
 .saulo {
-    max-width: 250px; /* Define uma largura máxima para a imagem */
-    height: auto; /* Mantém a proporção da imagem */
     position: absolute;
     right: 0; /* Alinha a imagem à direita */
-    top: 500px; /* Ajuste a altura conforme necessário para ficar abaixo do botão "Home" */
-    align-self: center;
+    top: 300px; /* Ajuste a altura conforme necessário para ficar abaixo do botão "Home" */
+    left: 1300px;
+    
 }
 
 .redes {
